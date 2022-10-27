@@ -4,6 +4,7 @@
   --main-color: #757575;
   --second-color: #212121;
   --main-white-color: #fff;
+  --second-white-color: #f5f4fa;
   --main-black-color: #000;
   --hero-background-color: #2f303a;
 }
@@ -20,20 +21,21 @@ hero-bacground color
 
 /* глобальні стилі */
 body {
+  color: var(--main-color);
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  /* font-weight: 400; стандарт для браузера */
   letter-spacing: 0.03em;
   padding: 0;
   margin: 0;
 }
-
-a {
+/* не відповідає умовам дз */
+/* a {
   text-decoration: none;
 }
 li {
   list-style-type: none;
-}
+} */
 /* header */
 
 .logo {
@@ -65,6 +67,7 @@ li {
 .contacts-link:focus {
   color: var(--brend-color);
 }
+
 /* контакти */
 .mail-link,
 .phone-link {
@@ -106,6 +109,7 @@ main {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--main-white-color);
   background-color: var(--brend-color);
+  cursor: pointer;
 }
 /* section */
 .section-title {
@@ -113,36 +117,40 @@ main {
   font-size: 36px;
   line-height: 1.16;
 
-  letter-spacing: 0.03em;
   color: var(--second-color);
 }
 /* переваги */
-.benefits-title {
+.features-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
+
   text-transform: uppercase;
   color: var(--second-color);
 }
-.benefits-text {
+.features-text {
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
+
   color: var(--main-color);
+}
+/* що ми робимо */
+/* команда */
+.team {
+  background-color: var(--second-white-color);
 }
 
 .name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  letter-spacing: 0.03em;
+
   color: var(--second-color);
 }
 .position {
   font-size: 16px;
   line-height: 1.18;
-  letter-spacing: 0.03em;
+
   color: var(--main-color);
 }
 /* footer */
@@ -155,18 +163,54 @@ footer {
 }
 
 .address {
-  font-style: normal;
+  /* font-style: normal;  */
+  /* text-decoration: none; */
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
+
   color: var(--main-white-color);
 }
 .mail,
 .number {
-  font-style: normal;
-  text-decoration: none;
+  /* font-style: normal; */
+  /* text-decoration: none; */
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
+
   color: rgba(255, 255, 255, 0.6);
+}
+/* портфоліо */
+/* projects-list */
+
+.nav-button {
+  /* стилі тексту */
+  font-style: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  color: var(--second-color);
+  /* оформлення  */
+  background-color: var(--second-white-color);
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+  /* стан */
+  cursor: pointer;
+}
+.nav-button:hover,
+.nav-button:focus {
+  background-color: var(--brend-color);
+  color: var(--main-white-color);
+}
+.project-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--second-color);
+}
+.project-subtitle {
+  font-size: 16px;
+  line-height: 1.88;
 }
