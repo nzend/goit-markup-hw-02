@@ -7,6 +7,10 @@
   --second-white-color: #f5f4fa;
   --main-black-color: #000;
   --hero-background-color: #2f303a;
+  --border-radius: 4px;
+  --box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  --main-font-size: 14px;
 }
 
 /* палітра кольорів */
@@ -23,19 +27,17 @@ hero-bacground color
 body {
   color: var(--main-color);
   font-family: "Roboto", sans-serif;
+  font-size: 14px;
   font-style: normal;
-  /* font-weight: 400; стандарт для браузера */
   letter-spacing: 0.03em;
-  padding: 0;
-  margin: 0;
 }
-/* не відповідає умовам дз */
-/* a {
+a {
   text-decoration: none;
+  font-style: normal;
 }
 li {
   list-style-type: none;
-} */
+}
 /* header */
 
 .logo {
@@ -54,7 +56,6 @@ li {
 .portfolio-link,
 .contacts-link {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--second-color);
@@ -72,7 +73,6 @@ li {
 .mail-link,
 .phone-link {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-color);
@@ -104,10 +104,10 @@ main {
   line-height: 1.88;
   letter-spacing: 0.06em;
   padding: 10px 32px;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--main-white-color);
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: var(--brend-color);
   cursor: pointer;
 }
@@ -122,14 +122,12 @@ main {
 /* переваги */
 .features-title {
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
 
   text-transform: uppercase;
   color: var(--second-color);
 }
 .features-text {
-  font-size: 14px;
   line-height: 1.71;
 
   color: var(--main-color);
@@ -144,13 +142,13 @@ main {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-
+  text-align: center;
   color: var(--second-color);
 }
 .position {
   font-size: 16px;
   line-height: 1.18;
-
+  text-align: center;
   color: var(--main-color);
 }
 /* footer */
@@ -163,18 +161,12 @@ footer {
 }
 
 .address {
-  /* font-style: normal;  */
-  /* text-decoration: none; */
-  font-size: 14px;
   line-height: 1.71;
 
   color: var(--main-white-color);
 }
 .mail,
 .number {
-  /* font-style: normal; */
-  /* text-decoration: none; */
-  font-size: 14px;
   line-height: 1.71;
 
   color: rgba(255, 255, 255, 0.6);
@@ -183,25 +175,23 @@ footer {
 /* projects-list */
 
 .nav-button {
-  /* стилі тексту */
   font-style: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   color: var(--second-color);
-  /* оформлення  */
   background-color: var(--second-white-color);
   padding: 6px 22px;
   border: none;
-  border-radius: 4px;
-  /* стан */
+  border-radius: var(--border-radius);
   cursor: pointer;
 }
 .nav-button:hover,
 .nav-button:focus {
   background-color: var(--brend-color);
   color: var(--main-white-color);
+  box-shadow: var(--box-shadow);
 }
 .project-title {
   font-weight: 700;
