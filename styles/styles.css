@@ -1,6 +1,7 @@
 /* змінні кольору */
 :root {
   --brend-color: #2196f3;
+  --brend-color-active: #188CE8;
   --main-color: #757575;
   --second-color: #212121;
   --main-white-color: #fff;
@@ -131,8 +132,8 @@ main {
 }
 .hero-button:hover,
 .hero-button:focus {
-  color: var(--brend-color);
-  background-color: var(--main-white-color);
+  background-color: var(--brend-color-active);
+  
 }
 
 /* section */
