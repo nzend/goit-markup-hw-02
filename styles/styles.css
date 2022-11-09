@@ -7,6 +7,7 @@
   --second-white-color: #f5f4fa;
   --main-black-color: #000;
   --hero-background-color: #2f303a;
+  --contacts-color: rgba(255, 255, 255, 0.6);
   --border-radius: 4px;
   --box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -26,10 +27,11 @@ hero-bacground color
 /* глобальні стилі */
 body {
   color: var(--main-color);
+  background-color: var(--main-white-color);
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  font-style: normal;
   letter-spacing: 0.03em;
+  line-height: 1.71;
 }
 a {
   text-decoration: none;
@@ -37,6 +39,19 @@ a {
 }
 li {
   list-style-type: none;
+}
+/* Приховані елементи */
+.hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /* header */
 
@@ -66,6 +81,9 @@ li {
 .studio-link:focus,
 .portfolio-link:focus,
 .contacts-link:focus {
+  color: var(--brend-color);
+}
+.current {
   color: var(--brend-color);
 }
 
@@ -111,6 +129,12 @@ main {
   background-color: var(--brend-color);
   cursor: pointer;
 }
+.hero-button:hover,
+.hero-button:focus {
+  color: var(--brend-color);
+  background-color: var(--main-white-color);
+}
+
 /* section */
 .section-title {
   font-weight: 700;
@@ -136,6 +160,9 @@ main {
 /* команда */
 .team {
   background-color: var(--second-white-color);
+}
+.team-list {
+  background-color: var(--main-white-color);
 }
 
 .name {
@@ -169,7 +196,7 @@ footer {
 .number {
   line-height: 1.71;
 
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--contacts-color);
 }
 /* портфоліо */
 /* projects-list */
